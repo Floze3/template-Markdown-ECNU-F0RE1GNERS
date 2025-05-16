@@ -9,7 +9,7 @@ pandoc \
     -o template.tex \
     --from markdown \
     -V mainfont="Source Han Serif CN" \
-    -V monofont="Maple Mono NF CN" \
+    -V monofont="Source Code Pro" \
     -V sansfont="Source Han Sans CN" \
     -V CJKmainfont="Source Han Serif CN" \
     -V secnumdepth=2 \
