@@ -48,8 +48,13 @@ jobs:
           cp -v source-code-pro/*/OTF/*.otf ~/.fonts/
           cp -v source-han-serif/*/SubsetOTF/*/*.otf ~/.fonts/
           cp -v source-han-sans/*/SubsetOTF/*/*.otf ~/.fonts/
+          mkdir -p /tmp/firacode
+          cd /tmp/firacode
+          wget -q -O firacode.zip https://github.com/tonsky/FiraCode/releases/download/6.2/FiraCode_6.2.zip
+          unzip -q firacode.zip -d firacode
+          cp -v firacode/ttf/*/*.ttf ~/.fonts/
           fc-cache -f
-          rm -rf source-code-pro{,.zip} source-han-serif{,.zip} source-han-sans{,.zip}
+          rm -rf source-code-pro{,.zip} source-han-serif{,.zip} source-han-sans{,.zip} firacode{,.zip}
 
       - name: Generate PDF
         run: |
